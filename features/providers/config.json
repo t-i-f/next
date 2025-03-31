@@ -1,0 +1,13 @@
+{
+    "name": "providers",
+    "type": "features",
+    "steps": [
+        "files"
+    ],
+    "files": [
+        [
+            "@next/features/providers/providers.tsx",
+            "app/providers.tsx"
+        ]
+    ]
+}

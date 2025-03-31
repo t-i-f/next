@@ -1,0 +1,20 @@
+path:
+  - app
+  - providers.tsx
+data:
+  - find: |
+      /^("use client")$/m
+    replace: |
+      $1
+      
+      import {HeroUIProvider} from '@heroui/react';
+    already: |
+      {HeroUIProvider}
+  - find: |
+      /^(.*)({children})$/m
+    replace: |
+      $1<HeroUIProvider>
+      $1$2
+      $1</HeroUIProvider>
+    already: |
+      </HeroUIProvider>

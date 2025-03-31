@@ -1,0 +1,19 @@
+path:
+  - app
+  - layout.tsx
+data:
+  - find: |
+      /^(import.*?.\/globals.css.*;)$/m
+    replace: |
+      import {Providers} from "./providers";
+      $1
+    already: |
+      {Providers}
+  - find: |
+      /^(.*)({children})$/m
+    replace: |
+      $1<Providers>
+      $1$2
+      $1</Providers>
+    already: |
+      </Providers>

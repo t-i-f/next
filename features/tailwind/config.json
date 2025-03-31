@@ -1,0 +1,28 @@
+{
+    "name": "tailwind",
+    "type": "features",
+    "steps": [
+        "deps",
+        "cmds|0",
+        "regex",
+        "files",
+        "cmds|1"
+    ],
+    "deps": [
+        "dev|tailwindcss@3 postcss autoprefixer @iconify/react",
+        "npm|usehooks-ts recharts framer-motion",
+        "features|@next/features/providers"
+    ],
+    "cmds": [
+        "npx tailwindcss@3 init -p",
+        "npx heroui-cli@latest add --all"
+    ],
+    "regex": [
+        "@next/features/tailwind/globalcss.yml",
+        "@next/features/tailwind/providers.yml",
+        "@next/features/tailwind/layout.yml"
+    ],
+    "files": [
+        ["@next/features/tailwind/tailwind.config.js"]
+    ]
+}

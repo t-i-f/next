@@ -1,0 +1,14 @@
+path:
+  - app
+  - globals.css
+data:
+  - find: |
+      /^(:root {)$/m
+    replace: |
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+      
+      $1
+    already: |
+      @tailwind
